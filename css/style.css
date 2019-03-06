@@ -1,0 +1,91 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: #7386D5;
+}
+.cardBox{
+	position: absolute;
+	top: 50%;
+	left: 35%;
+	transform: translate(-50%, -50%);
+	perspective: 1000px;
+}
+.heading{
+	color: white; 
+	text-align: center;
+	margin-bottom: 20px;
+	text-decoration: underline dotted;
+}
+.cardBox .card,
+.cardBox2 .card{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	background: #262626;
+	transform-style: preserve-3d;
+	transition: 1s ease;
+}
+.cardBox .card .card-front,
+.cardBox .card .card-back,
+.cardBox2 .card .card-front,
+.cardBox2 .card .card-back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+.cardBox .card .card-front,
+.cardBox2 .card .card-front{
+	display: flex;
+	font-size: 40px;
+	justify-content: center;
+	align-items: center;
+	background: #262626;
+	color: #fff;
+	overflow: hidden;
+}
+.cardBox .card .card-back{
+	top: 15px;
+}
+.cardBox2 .card .card-back{
+	top: 45px;
+}
+.cardBox:hover .card,
+.cardBox2:hover .card{
+	transform: rotateY(180deg);
+}
+.cardBox .card .card-back,
+.cardBox2 .card .card-back{
+	transform: rotateY(180deg);
+}
+
+.cardBox2{
+	position: absolute;
+	top: 50%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+	perspective: 1000px;
+}
+.divMargin{
+    margin-bottom: 10px;
+}
+.txt2[type="submit"] {
+    background: #242424 none repeat scroll 0 0;
+    border: 1px solid #4f5c04;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 35px;
+    margin: 10px 0;
+    padding: 0;
+    text-transform: uppercase;
+    width: 30%;
+}
+.txt2:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #5793ef;
+    transition: all 0.5s ease 0s;
+}
